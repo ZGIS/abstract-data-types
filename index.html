@@ -25,7 +25,7 @@
     </header>
     <div class="w3-content w3-card" style="margin-top:70px;margin-bottom:30px">
     <div>
-    <x3d id='someUniqueId' style="border:none !important" class="w3-card" showStat='false' showLog='false' x='0px' y='0px' width='980px' height='600px'>
+    <x3d id='someUniqueId' style="border:none !important" showStat='false' showLog='false' x='0px' y='0px' width='980px' height='600px'>
       <scene>
         <navigationInfo avatarSize='0.25 1.75 0.75' type='"EXAMINE" "ANY"'></navigationInfo>
         <background DEF='WO_World' groundColor='0.051 0.051 0.051' skyColor='0.051 0.051 0.051'></background>
@@ -915,7 +915,17 @@
     <div class="w3-padding">
         <div id="dummy" style="height:600px"></div>
         <h3>Description</h3>
-        <div class="text">Text here</div>
+        <div class="text">Example phenomena relevant to Earth observation in a 3D space. Here, the three axes space, time, and theme provide an ordering principle for EO spatio-temporal phenomena. Note that aspect space can be conceived as position (0-dimensional, coordinate tupel or tripel), or as geometric features (set of coordinate tupels, e.g. size, compactness, etc.).<br/>
+        
+        We suggest the following abstract data types in the context of EO data cubes, which are illustrated above:
+        <ul>
+          <li>Coverage: Fixing time, manipulating position, observing theme.</li>
+          <li>Time series: Fixing position, manipulating time, observing theme.</li>
+          <li>Composition: Fixing position, manipulating time, observing space.</li>
+          <li>Trajectory: Fixing theme, manipulating time, observing position.</li>
+          <li>Evolution: Fixing theme, manipulating time, observing space..</li>
+        </ul>
+        </div>
         <h3>Usage</h3>
         <div class="text">Use right mouse button to zoom-in and zoom-out. Use left mouse button to rotate the view. Klick with the middle mouse button moves the view. If you are lost, reload the page to go back to the initial view.</div>
         <h3>Contact</h3>
