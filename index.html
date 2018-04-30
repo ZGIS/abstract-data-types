@@ -15,6 +15,9 @@
         border-left:5px solid lightgrey;
         padding-left: 10px;
     }
+        h4{
+            display: inline-block;
+        }
     </style>
   </head>
   <body>
@@ -29,7 +32,7 @@
     <Scene>
 		<NavigationInfo headlight="true"
 		                visibilityLimit="0.0"
-		                type='"EXAMINE", "ANY"'
+		                type='"EXAMINE"'
 		                avatarSize="0.25, 1.75, 0.75"
 		                ></NavigationInfo>
 		<Background DEF="WO_World"
@@ -71,19 +74,14 @@
 				</Group>
 			</Transform>
 		</Transform>
-		
-		<Transform DEF="Camera_TRANSFORM"
-		           translation="-43.991589 28.213177 -42.634956"
-		           scale="1.000000 1.000000 1.000000"
-		           rotation="-0.079296 -0.974205 -0.211276 2.440580"
-		           >
-			<Viewpoint DEF="CA_Camera"
+
+        <Viewpoint id="view_cam" DEF="CA_Camera"
 			           centerOfRotation="0 0 0"
-			           position="0.00 -0.00 -0.00"
-			           orientation="0.82 -0.41 -0.40 0.00"
+			           position="-43.991589 28.213177 -42.634956"
+                   orientation="-0.079296 -0.974205 -0.211276 2.440580"
 			           fieldOfView="0.858"
-			           />
-		</Transform>
+                   ></Viewpoint>
+
 		<Transform DEF="Text_039_TRANSFORM"
 		           translation="0.498337 14.774992 0.137557"
 		           scale="1.000000 1.000000 1.000000"
@@ -2046,11 +2044,27 @@
 				</Group>
 			</Transform>
 		</Transform>
+        <OrthoViewpoint id="view_oFront" centerOfRotation="0 0 0" fieldOfView="-20 -20 20 20" orientation="0 1 0 3.14" position="0 0 -50" zFar="1000" zNear="0.5">
+        </OrthoViewpoint>
+        <OrthoViewpoint id="view_oRight" centerOfRotation="0 0 0" fieldOfView="-20 -20 20 20" orientation="0 1 0 -1.5708" position="-50 0 0" zFar="1000" zNear="0.5">
+        </OrthoViewpoint>
+        <Transform rotation="0 1 0 3.14">
+            <OrthoViewpoint id="view_oTop" centerOfRotation="0 0 0" fieldOfView="-20 -20 20 20" orientation="1 0 0 -1.5708" position="0 50 0" zFar="1000" zNear="0.5">
+        </OrthoViewpoint>
+        </Transform>
 	</Scene>
     </x3d>
     </div>
+    <div id="views">
+        <h4>Choose view:</h4>
+        <button onclick="document.getElementById('view_cam').setAttribute('set_bind','true');">Camera Perspective</button>
+        <button onclick="document.getElementById('view_oFront').setAttribute('set_bind','true');">Front Ortho</button>
+        <button onclick="document.getElementById('view_oRight').setAttribute('set_bind','true');">Right Ortho</button>
+        <button onclick="document.getElementById('view_oTop').setAttribute('set_bind','true');">Top Ortho</button>
+
+    </div>
     <div class="w3-padding">
-        <div class="dummy" style="height:600px"></div>
+        <div class="dummy" style="height:00px"></div>
         <h3>Description</h3>
         <div class="text">Example phenomena relevant to Earth observation in a 3D space. Here, the three axes space, time, and theme provide an ordering principle for EO spatio-temporal phenomena. Note that aspect space can be conceived as position (0-dimensional, coordinate tupel or tripel), or as geometric features (set of coordinate tupels, e.g. size, compactness, etc.).<br/>
         
