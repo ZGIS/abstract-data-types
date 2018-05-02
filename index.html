@@ -15,9 +15,23 @@
         border-left:5px solid lightgrey;
         padding-left: 10px;
     }
-        h4{
-            display: inline-block;
-        }
+    
+    h4{
+        display: inline-block;
+    }
+        
+    .button {
+      display: inline-block;
+      border-radius: 4px;
+      border: none;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 5px;
+      width: 150px;
+      transition: all 0.5s;
+      cursor: pointer;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
     </style>
   </head>
   <body>
@@ -2055,12 +2069,12 @@
 	</Scene>
     </x3d>
     </div>
-    <div id="views">
+    <div id="views" class="w3-padding">
         <h4>Choose view:</h4>
-        <button onclick="document.getElementById('view_cam').setAttribute('set_bind','true');">Camera Perspective</button>
-        <button onclick="document.getElementById('view_oFront').setAttribute('set_bind','true');">Front Ortho</button>
-        <button onclick="document.getElementById('view_oRight').setAttribute('set_bind','true');">Right Ortho</button>
-        <button onclick="document.getElementById('view_oTop').setAttribute('set_bind','true');">Top Ortho</button>
+        <button class="button w3-indigo" onclick="document.getElementById('view_cam').setAttribute('set_bind','true');">Camera Perspective</button>
+        <button class="button w3-indigo" onclick="document.getElementById('view_oFront').setAttribute('set_bind','true');">Front Ortho</button>
+        <button class="button w3-indigo" onclick="document.getElementById('view_oRight').setAttribute('set_bind','true');">Right Ortho</button>
+        <button class="button w3-indigo" onclick="document.getElementById('view_oTop').setAttribute('set_bind','true');">Top Ortho</button>
 
     </div>
     <div class="w3-padding">
