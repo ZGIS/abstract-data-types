@@ -31,3 +31,8 @@ Abstract data types are a helpful framework to formalise analyses and make them 
 }
 ```
 
+=======
+## Usage
+
+Open the index.html with any browser exept IE. No server required.
+
