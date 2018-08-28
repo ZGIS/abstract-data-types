@@ -2084,11 +2084,11 @@
         
         We suggest the following abstract data types in the context of EO data cubes, which are illustrated above:
         <ul>
-          <li>Coverage: A coverage is constructed by fixing time, manipulating position, observing theme (continuous or discrete).</li>
-          <li>Composition: A composition is constructed by fixing time, manipulating theme, observing space.</li>
-          <li>Time series: A time series is constructed by fixing the position, manipulating time, observing theme (continuous or discrete).</li>
-          <li>Trajectory: A trajectory is constructed by fixing theme, manipulating time, observing position.</li>
-          <li>Evolution: An evolution is constructed by fixing theme, manipulating time, observing space.</li>
+          <li>Coverage: A coverage is constructed by fixing time, controlling position, measuring theme (continuous or discrete).</li>
+          <li>Composition: A composition is constructed by fixing time, controlling theme, measuring space.</li>
+          <li>Time series: A time series is constructed by fixing the position, controlling time, measuring theme (continuous or discrete).</li>
+          <li>Trajectory: A trajectory is constructed by fixing theme, controlling time, measuring position.</li>
+          <li>Evolution: An evolution is constructed by fixing theme, controlling time, measuring space.</li>
         </ul>
         To describe more complex phenomena, the abstract data types can be combined. For example, a pixel-based land cover change map might be constructed as a <i>coverage of time series</i>. For an object-based grouping of the change classes, a <i>composition of coverage of time series</i> allows object-based evaluation.
 Another example is an object-based crop cycle, where potential changes of size and shape of a specific agricultural field might be expressed by a <i>evolution of time series</i>. 
